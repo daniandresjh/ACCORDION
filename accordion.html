@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Accordion Component</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Instrument Sans", sans-serif;
+        color: #495057;
+        line-height: 1;
+      }
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .item {
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
+      }
+      .number,
+      .text {
+        font-size: 24px;
+        font-weight: 500;
+        /* color: #4dabf7; */
+      }
+      .number {
+        color: #adb5bd;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        stroke: #4dabf7;
+      }
+      .hidden-box {
+        grid-column: 2;
+        display: none;
+      }
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+      .hidden-box ul {
+        color: #adb5bd;
+        margin-left: 17px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .open {
+        border-top: 4px solid #4dabf7;
+      }
+      .open .hidden-box {
+        display: block;
+      }
+      .open .number,
+      .open .text {
+        color: #4dabf7;
+      }
+    </style>
+    <div class="accordion">
+      <div class="item">
+        <p class="number">01</p>
+        <p class="text">How long do I have to return my chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+          />
+          <path d="M9 11l3 3l3 -3" />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            inventore saepe iste fugiat labore non, rerum, corrupti dignissimos
+            voluptates sunt explicabo molestias! Vero reiciendis laborum.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>
+              inventore saepe iste fugiat labore non, rerum, corrupti
+              dignissimos
+            </li>
+            <li>
+              voluptates sunt explicabo molestias! Vero reiciendis laborum
+              eligendi,
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item open">
+        <p class="number">02</p>
+        <p class="text">How long do I have to return my chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+          />
+          <path d="M9 11l3 3l3 -3" />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            inventore saepe iste fugiat labore non, rerum, corrupti dignissimos
+            voluptates sunt explicabo molestias! Vero reiciendis laborum.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>
+              inventore saepe iste fugiat labore non, rerum, corrupti
+              dignissimos
+            </li>
+            <li>
+              voluptates sunt explicabo molestias! Vero reiciendis laborum
+              eligendi,
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="number">03</p>
+        <p class="text">How long do I have to return my chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+          />
+          <path d="M9 11l3 3l3 -3" />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            inventore saepe iste fugiat labore non, rerum, corrupti dignissimos
+            voluptates sunt explicabo molestias! Vero reiciendis laborum.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>
+              inventore saepe iste fugiat labore non, rerum, corrupti
+              dignissimos
+            </li>
+            <li>
+              voluptates sunt explicabo molestias! Vero reiciendis laborum
+              eligendi,
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
